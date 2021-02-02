@@ -6,7 +6,9 @@
 name: ${name}
 main: ${main}
 version: ${version}
-authors: ['坏黑']
+authors: ['枫溪']
+
+depend: [AttributePlus]
 
 api-version: 1.13
 
