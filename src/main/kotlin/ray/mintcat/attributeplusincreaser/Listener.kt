@@ -9,7 +9,6 @@ import org.bukkit.event.Listener
 import org.bukkit.event.player.PlayerJoinEvent
 import org.serverct.ersha.api.AttributeAPI
 import org.serverct.ersha.api.event.AttrUpdateAttributeEvent
-import org.serverct.ersha.attribute.data.AttributeData
 
 @TListener
 class Listener : Listener {
@@ -23,7 +22,7 @@ class Listener : Listener {
         val data = LocalPlayer.get(player)
         val list = data.getStringList("attributeplusincreaser.increase")
         Bukkit.getScheduler().runTaskAsynchronously(AttributePlusIncreaser.plugin, Runnable {
-            AttributeAPI.getAPI().addSourceAttribute(event.attributeData, "apilasting", list)
+            AttributeAPI.getAPI().addSourceAttribute(event.attributeData, "apilasting", list, true)
         })
     }
 
